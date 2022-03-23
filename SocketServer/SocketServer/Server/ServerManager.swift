@@ -8,31 +8,25 @@
 import Cocoa
 
 class ServerManager: NSObject {
-    // 创建ServerSocket 端口不能用1024 之前的
-    fileprivate  var serverSocket = TCPServer(addr: "127.0.0.1", port: 7878)
-    
+    fileprivate lazy var serverSocket : TCPServer = TCPServer(address: "0.0.0.0", port: 7878)
 }
 
 extension ServerManager {
-    
     func startRunning() {
-        
-        // 开启监听
-        self.serverSocket.listen()
-        print("开启服务器")
-        // 开始接受客户端 返回客户端
+        // 1.开启监听
+        let result = serverSocket.listen()
+        print(result)
+        // 2.开始接受客户端
         DispatchQueue.global().async {
-            if let client = self.serverSocket.accept() {
-                print("接收到一个客户端的请求")
-            }else{
-                print("接收到一个客户端的请求")
+            while true {
+                if let client = self.serverSocket.accept() {
+                    print("有客户端杰瑞")
+                }
             }
         }
-        
-        
     }
     
     func stopRunning() {
-        
     }
+    
 }

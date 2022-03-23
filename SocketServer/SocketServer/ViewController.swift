@@ -20,9 +20,9 @@ class ViewController: NSViewController {
     }
 
     @IBAction func startServer(_ sender: NSButton) {
-        
-        infoField.stringValue = "服务器已开启"
         socket.startRunning()
+        infoField.stringValue = "服务器已开启"
+        
     }
     
     @IBAction func stopServer(_ sender: NSButton) {

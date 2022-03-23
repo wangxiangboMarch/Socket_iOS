@@ -63,6 +63,7 @@ open class TCPClient:YSocket{
     * close socket
     * return success or fail with message
     */
+    @discardableResult
     open func close()->(Bool,String){
         if let fd:Int32=self.fd{
             _ = c_ytcpsocket_close(fd)
@@ -108,6 +109,7 @@ open class TCPClient:YSocket{
     *
     * send nsdata
     */
+    @discardableResult
     open func send(data d:Data)->(Bool,String){
         if let fd:Int32=self.fd{
             var buff:[UInt8] = [UInt8](repeating: 0x0,count: d.count)
