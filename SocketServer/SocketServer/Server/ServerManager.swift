@@ -19,6 +19,7 @@ extension ServerManager {
         
         // 开启监听
         serverSocket.listen()
+        print("开启服务器")
         // 开始接受客户端 返回客户端
         DispatchQueue.global().async {
             if let client = self.serverSocket.accept() {
