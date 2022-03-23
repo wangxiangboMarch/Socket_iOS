@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78F7DA9B27EB5BD000653F02 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9527EB5BD000653F02 /* yudpsocket.c */; };
+		78F7DA9C27EB5BD000653F02 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9627EB5BD000653F02 /* yudpsocket.swift */; };
+		78F7DA9D27EB5BD000653F02 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9727EB5BD000653F02 /* ytcpsocket.c */; };
+		78F7DA9E27EB5BD000653F02 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9827EB5BD000653F02 /* ysocket.swift */; };
+		78F7DA9F27EB5BD000653F02 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9927EB5BD000653F02 /* ytcpsocket.swift */; };
+		78F7DAA027EB5BD000653F02 /* YYSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9A27EB5BD000653F02 /* YYSocket.swift */; };
 		89B0D5C927EB29F400895822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5C827EB29F400895822 /* AppDelegate.swift */; };
 		89B0D5CB27EB29F400895822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5CA27EB29F400895822 /* SceneDelegate.swift */; };
 		89B0D5CD27EB29F400895822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5CC27EB29F400895822 /* ViewController.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78F7DA9527EB5BD000653F02 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		78F7DA9627EB5BD000653F02 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		78F7DA9727EB5BD000653F02 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		78F7DA9827EB5BD000653F02 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		78F7DA9927EB5BD000653F02 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		78F7DA9A27EB5BD000653F02 /* YYSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSocket.swift; sourceTree = "<group>"; };
 		89B0D5C527EB29F400895822 /* SocketClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B0D5C827EB29F400895822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89B0D5CA27EB29F400895822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +88,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78F7DA9327EB5BD000653F02 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				78F7DA9427EB5BD000653F02 /* ysocket */,
+				78F7DA9A27EB5BD000653F02 /* YYSocket.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		78F7DA9427EB5BD000653F02 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				78F7DA9527EB5BD000653F02 /* yudpsocket.c */,
+				78F7DA9627EB5BD000653F02 /* yudpsocket.swift */,
+				78F7DA9727EB5BD000653F02 /* ytcpsocket.c */,
+				78F7DA9827EB5BD000653F02 /* ysocket.swift */,
+				78F7DA9927EB5BD000653F02 /* ytcpsocket.swift */,
+			);
+			path = ysocket;
+			sourceTree = "<group>";
+		};
 		89B0D5BC27EB29F400895822 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +132,7 @@
 		89B0D5C727EB29F400895822 /* SocketClient */ = {
 			isa = PBXGroup;
 			children = (
+				78F7DA9327EB5BD000653F02 /* Socket */,
 				89B0D5C827EB29F400895822 /* AppDelegate.swift */,
 				89B0D5CA27EB29F400895822 /* SceneDelegate.swift */,
 				89B0D5CC27EB29F400895822 /* ViewController.swift */,
@@ -258,8 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F7DA9B27EB5BD000653F02 /* yudpsocket.c in Sources */,
+				78F7DAA027EB5BD000653F02 /* YYSocket.swift in Sources */,
+				78F7DA9E27EB5BD000653F02 /* ysocket.swift in Sources */,
+				78F7DA9C27EB5BD000653F02 /* yudpsocket.swift in Sources */,
 				89B0D5CD27EB29F400895822 /* ViewController.swift in Sources */,
+				78F7DA9F27EB5BD000653F02 /* ytcpsocket.swift in Sources */,
 				89B0D5C927EB29F400895822 /* AppDelegate.swift in Sources */,
+				78F7DA9D27EB5BD000653F02 /* ytcpsocket.c in Sources */,
 				89B0D5CB27EB29F400895822 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +485,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +495,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,6 +514,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
