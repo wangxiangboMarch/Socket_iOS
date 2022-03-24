@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    fileprivate  var socket = YYSocket(addr: "192.168.31.124", port: 7878)
+    fileprivate  var socket = YYSocket(addr: "192.168.5.212", port: 7878)
     
     override func viewDidLoad() {
         super.viewDidLoad()

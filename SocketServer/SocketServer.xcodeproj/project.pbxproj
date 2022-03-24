@@ -46,7 +46,6 @@
 		78F7DAB027EB738C00653F02 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
 		78F7DAB127EB738C00653F02 /* TCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPClient.swift; sourceTree = "<group>"; };
 		78F7DAB227EB738C00653F02 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		78F7DAB327EB738C00653F02 /* SwiftSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftSocket.h; sourceTree = "<group>"; };
 		78F7DAB427EB738C00653F02 /* UDPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPClient.swift; sourceTree = "<group>"; };
 		78F7DAB527EB738C00653F02 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 		78F7DABC27EB757700653F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +94,6 @@
 				78F7DAB027EB738C00653F02 /* ytcpsocket.c */,
 				78F7DAB127EB738C00653F02 /* TCPClient.swift */,
 				78F7DAB227EB738C00653F02 /* Result.swift */,
-				78F7DAB327EB738C00653F02 /* SwiftSocket.h */,
 				78F7DAB427EB738C00653F02 /* UDPClient.swift */,
 				78F7DAB527EB738C00653F02 /* Socket.swift */,
 			);
