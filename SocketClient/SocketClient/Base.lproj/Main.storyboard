@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -60,22 +61,39 @@
                                     <constraint firstAttribute="height" constant="280" id="MgE-ne-qwT"/>
                                 </constraints>
                             </stackView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ims-sy-hWd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="478"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ims-sy-hWd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1C1-PQ-lbw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y65-1h-tet" secondAttribute="bottom" constant="30" id="1O3-x3-Jba"/>
+                            <constraint firstItem="Y65-1h-tet" firstAttribute="top" secondItem="Ims-sy-hWd" secondAttribute="bottom" constant="30" id="AYi-Sf-nBH"/>
+                            <constraint firstItem="Ims-sy-hWd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="F7k-fW-2EE"/>
                             <constraint firstItem="Y65-1h-tet" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="JVg-Ab-Xbs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y65-1h-tet" secondAttribute="trailing" constant="30" id="SHz-yf-NX4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ims-sy-hWd" secondAttribute="trailing" id="XMB-aw-Eyd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logView" destination="Ims-sy-hWd" id="7yj-qe-9wX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-501" y="133"/>
+            <point key="canvasLocation" x="-80" y="137"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

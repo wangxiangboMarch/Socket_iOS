@@ -22,7 +22,7 @@ class YYSocket {
     weak var delegate: YYSocketDelegate?
     
     lazy var user: User = {
-        let user = User(level: 100, name: "李磊类")
+        let user = User(level: 100, name: "lucy")
         return user
     }()
     
@@ -35,7 +35,7 @@ class YYSocket {
 extension YYSocket {
     /// 连接服务器
     func connectServer() -> Bool {
-        return client.connect(timeout: 5).0
+        return client.connect(timeout: 10).0
     }
     /// 开始接收消息
     func startReadMessage() {

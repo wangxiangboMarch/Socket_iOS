@@ -13,10 +13,13 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var infoField: NSTextField!
     
+    @IBOutlet weak var logView: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        socket.logDelegate = self
     }
 
     @IBAction func startServer(_ sender: NSButton) {
@@ -32,3 +35,9 @@ class ViewController: NSViewController {
     
 }
 
+extension ViewController: ServerManagerLogDelegate {
+    
+    func serverLog(_ msg: String) {
+        logView.stringValue = logView.stringValue + "\n" + msg
+    }
+}

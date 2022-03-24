@@ -706,21 +706,21 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="SocketServer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="506"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fZB-S4-lQX">
-                                <rect key="frame" x="43" y="173" width="100" height="32"/>
+                                <rect key="frame" x="43" y="409" width="102" height="32"/>
                                 <buttonCell key="cell" type="push" title="开启服务器" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="myw-eI-rkq">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="startServer:" target="XfG-lQ-9wD" id="OAk-3U-9kX"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="28M-9A-BJs">
-                                <rect key="frame" x="337" y="173" width="100" height="32"/>
+                                <rect key="frame" x="337" y="409" width="100" height="32"/>
                                 <buttonCell key="cell" type="push" title="停止服务器" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RqD-Nz-yv1">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name="STSongti-SC-Regular"/>
@@ -735,7 +735,18 @@
                                     <constraint firstAttribute="height" constant="30" id="JzB-Kn-ufc"/>
                                 </constraints>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="服务器未开启" id="Sc4-8v-act">
-                                    <font key="font" size="22" name=".PingFangSC-Regular"/>
+                                    <font key="font" metaFont="system" size="22"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="gbm-EG-hnw">
+                                <rect key="frame" x="28" y="86" width="424" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7JU-if-sZB"/>
+                                </constraints>
+                                <textFieldCell key="cell" truncatesLastVisibleLine="YES" selectable="YES" alignment="left" id="eAY-Rd-gP7">
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -743,21 +754,26 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bBE-Xi-Ktg" secondAttribute="trailing" constant="20" id="4S3-0a-ekj"/>
+                            <constraint firstAttribute="trailing" secondItem="gbm-EG-hnw" secondAttribute="trailing" constant="30" id="5HQ-vY-n4u"/>
+                            <constraint firstItem="gbm-EG-hnw" firstAttribute="top" secondItem="28M-9A-BJs" secondAttribute="bottom" constant="30" id="5jF-7m-CTL"/>
                             <constraint firstItem="fZB-S4-lQX" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="70" id="AJd-Br-v89"/>
                             <constraint firstAttribute="bottom" secondItem="bBE-Xi-Ktg" secondAttribute="bottom" constant="60" id="Baq-NF-PZf"/>
                             <constraint firstItem="28M-9A-BJs" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="70" id="CMV-A6-dIH"/>
+                            <constraint firstItem="28M-9A-BJs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fZB-S4-lQX" secondAttribute="trailing" constant="12" symbolic="YES" id="OAj-K3-G3W"/>
                             <constraint firstAttribute="trailing" secondItem="28M-9A-BJs" secondAttribute="trailing" constant="50" id="Rsz-e4-xzU"/>
                             <constraint firstItem="fZB-S4-lQX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="50" id="Y86-0L-G6i"/>
+                            <constraint firstItem="gbm-EG-hnw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="30" id="YDK-Bv-AW3"/>
                             <constraint firstItem="bBE-Xi-Ktg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="mlg-xd-uYx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="infoField" destination="bBE-Xi-Ktg" id="6mL-PE-cJI"/>
+                        <outlet property="logView" destination="gbm-EG-hnw" id="3Nj-E2-a5H"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-340" y="775"/>
         </scene>
     </scenes>
 </document>

@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78A1B55027EC9FBE008CD5D4 /* WelfareLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 78A1B54F27EC9FBE008CD5D4 /* WelfareLibrary */; };
 		78F7DA9B27EB5BD000653F02 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9527EB5BD000653F02 /* yudpsocket.c */; };
 		78F7DA9C27EB5BD000653F02 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9627EB5BD000653F02 /* yudpsocket.swift */; };
 		78F7DA9D27EB5BD000653F02 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9727EB5BD000653F02 /* ytcpsocket.c */; };
 		78F7DA9E27EB5BD000653F02 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9827EB5BD000653F02 /* ysocket.swift */; };
 		78F7DA9F27EB5BD000653F02 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9927EB5BD000653F02 /* ytcpsocket.swift */; };
 		78F7DAA027EB5BD000653F02 /* YYSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9A27EB5BD000653F02 /* YYSocket.swift */; };
-		893BE5BF27EC481000CCDAB1 /* WelfareLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 893BE5BE27EC481000CCDAB1 /* WelfareLibrary */; };
 		89B0D5C927EB29F400895822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5C827EB29F400895822 /* AppDelegate.swift */; };
-		89B0D5CB27EB29F400895822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5CA27EB29F400895822 /* SceneDelegate.swift */; };
 		89B0D5CD27EB29F400895822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5CC27EB29F400895822 /* ViewController.swift */; };
 		89B0D5D027EB29F400895822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B0D5CE27EB29F400895822 /* Main.storyboard */; };
 		89B0D5D227EB29F800895822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B0D5D127EB29F800895822 /* Assets.xcassets */; };
@@ -52,7 +51,6 @@
 		78F7DA9A27EB5BD000653F02 /* YYSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSocket.swift; sourceTree = "<group>"; };
 		89B0D5C527EB29F400895822 /* SocketClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B0D5C827EB29F400895822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		89B0D5CA27EB29F400895822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		89B0D5CC27EB29F400895822 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89B0D5CF27EB29F400895822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89B0D5D127EB29F800895822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				893BE5BF27EC481000CCDAB1 /* WelfareLibrary in Frameworks */,
+				78A1B55027EC9FBE008CD5D4 /* WelfareLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +115,6 @@
 		89B0D5BC27EB29F400895822 = {
 			isa = PBXGroup;
 			children = (
-				89B0D60227EC3A8C00895822 /* Packages */,
 				89B0D5C727EB29F400895822 /* SocketClient */,
 				89B0D5DE27EB29F800895822 /* SocketClientTests */,
 				89B0D5E827EB29F900895822 /* SocketClientUITests */,
@@ -141,7 +138,6 @@
 			children = (
 				78F7DA9327EB5BD000653F02 /* Socket */,
 				89B0D5C827EB29F400895822 /* AppDelegate.swift */,
-				89B0D5CA27EB29F400895822 /* SceneDelegate.swift */,
 				89B0D5CC27EB29F400895822 /* ViewController.swift */,
 				89B0D5CE27EB29F400895822 /* Main.storyboard */,
 				89B0D5D127EB29F800895822 /* Assets.xcassets */,
@@ -168,13 +164,6 @@
 			path = SocketClientUITests;
 			sourceTree = "<group>";
 		};
-		89B0D60227EC3A8C00895822 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		89B0D60E27EC3E9700895822 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +188,7 @@
 			);
 			name = SocketClient;
 			packageProductDependencies = (
-				893BE5BE27EC481000CCDAB1 /* WelfareLibrary */,
+				78A1B54F27EC9FBE008CD5D4 /* WelfareLibrary */,
 			);
 			productName = SocketClient;
 			productReference = 89B0D5C527EB29F400895822 /* SocketClient.app */;
@@ -274,7 +263,7 @@
 			);
 			mainGroup = 89B0D5BC27EB29F400895822;
 			packageReferences = (
-				893BE5BD27EC480F00CCDAB1 /* XCRemoteSwiftPackageReference "welfare-library" */,
+				78A1B54E27EC9FBE008CD5D4 /* XCRemoteSwiftPackageReference "welfare-library" */,
 			);
 			productRefGroup = 89B0D5C627EB29F400895822 /* Products */;
 			projectDirPath = "";
@@ -328,7 +317,6 @@
 				78F7DA9F27EB5BD000653F02 /* ytcpsocket.swift in Sources */,
 				89B0D5C927EB29F400895822 /* AppDelegate.swift in Sources */,
 				78F7DA9D27EB5BD000653F02 /* ytcpsocket.c in Sources */,
-				89B0D5CB27EB29F400895822 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,12 +496,13 @@
 				DEVELOPMENT_TEAM = W3WX9TN82K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocketClient/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = 000;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -537,12 +526,13 @@
 				DEVELOPMENT_TEAM = W3WX9TN82K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SocketClient/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = 000;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,7 +664,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		893BE5BD27EC480F00CCDAB1 /* XCRemoteSwiftPackageReference "welfare-library" */ = {
+		78A1B54E27EC9FBE008CD5D4 /* XCRemoteSwiftPackageReference "welfare-library" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@gitee.com:laoyouHome/welfare-library.git";
 			requirement = {
@@ -685,9 +675,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		893BE5BE27EC481000CCDAB1 /* WelfareLibrary */ = {
+		78A1B54F27EC9FBE008CD5D4 /* WelfareLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 893BE5BD27EC480F00CCDAB1 /* XCRemoteSwiftPackageReference "welfare-library" */;
+			package = 78A1B54E27EC9FBE008CD5D4 /* XCRemoteSwiftPackageReference "welfare-library" */;
 			productName = WelfareLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */

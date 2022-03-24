@@ -7,12 +7,17 @@
 
 import Cocoa
 
+protocol ServerManagerLogDelegate: AnyObject {
+    func serverLog(_ msg: String)
+}
+
 class ServerManager: NSObject {
-    fileprivate lazy var serverSocket : TCPServer = TCPServer(address: "0.0.0.0", port: 7878)
+    fileprivate lazy var serverSocket : TCPServer = TCPServer(address: "192.168.31.124", port: 7878)
     // 服务器是否运行
     fileprivate lazy var isServerRunning: Bool = false
     // 保存客户端
     fileprivate lazy var clientManagers: [ClientManager] = []
+    weak var logDelegate: ServerManagerLogDelegate?
 }
 
 extension ServerManager {
@@ -20,12 +25,19 @@ extension ServerManager {
         // 1.开启监听
         isServerRunning = true
         let result = serverSocket.listen()
-        print(result)
+        if result.isSuccess {
+            logDelegate?.serverLog("服务器开始监听")
+        }else{
+            logDelegate?.serverLog("服务器开始监听失败")
+        }
         // 2.开始接受客户端
         DispatchQueue.global().async {
             while self.isServerRunning {
                 if let client = self.serverSocket.accept() {
                     // 新开线程。进行接受消息的无限循环。否则的话会卡住线程 无法接受多个客户端连接
+                    DispatchQueue.main.sync {
+                        self.logDelegate?.serverLog("接收到了客户端的链接。。。")
+                    }
                     DispatchQueue.global().async {
                         self.handleClient(client)
                     }
@@ -37,7 +49,6 @@ extension ServerManager {
     func stopRunning() {
         isServerRunning = false
     }
-    
 }
 
 extension ServerManager {
@@ -52,7 +63,17 @@ extension ServerManager {
     }
 }
 
-extension ServerManager: ClientManagerDelefate {
+extension ServerManager: ClientManagerDelegate {
+    func remove(client: TCPClient) {
+        // 从存储中移除当前client
+        if let index = try? clientManagers.firstIndex(where: { client.address == $0.client.address }) {
+            clientManagers.remove(at: index)
+        }
+    }
+    
+    func clientLog(_ msg: String) {
+        logDelegate?.serverLog(msg)
+    }
     
     func sendMessageToClient(_ msg: Data) {
         
