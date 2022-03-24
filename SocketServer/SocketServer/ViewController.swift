@@ -26,6 +26,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func stopServer(_ sender: NSButton) {
+        socket.stopRunning()
         infoField.stringValue = "服务器已关闭"
     }
     

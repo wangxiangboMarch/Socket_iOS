@@ -108,6 +108,7 @@ open class TCPClient: Socket {
     *
     * send nsdata
     */
+    @discardableResult
     open func send(data: Data) -> Result {
         guard let fd = self.fd else { return .failure(SocketError.connectionClosed) }
       

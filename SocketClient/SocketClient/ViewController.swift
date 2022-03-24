@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WelfareLibrary
 
 class ViewController: UIViewController {
 
@@ -13,24 +14,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         view.backgroundColor = UIColor.white
-        
-    }
-
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        
-        
         if socket.connectServer() {
-            print("链接了 服务器")
+            print("服务器连接成功")
+            socket.startReadMessage()
         }
-        
-        
     }
     
+    @IBAction func joinRoom() {
+        socket.enterRoom()
+    }
+    
+    @IBAction func leaveRoom() {
+        socket.leaveRoom()
+    }
+    
+    @IBAction func sendText() {
+        socket.sendChat(text: "这是一条文本消息")
+    }
+    
+    @IBAction func sendGift() {
+        socket.sendGif(name: "火箭", count: 1000, url: "http://www.baidu.com")
+    }
     
 }
 

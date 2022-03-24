@@ -13,6 +13,7 @@
 		78F7DA9E27EB5BD000653F02 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9827EB5BD000653F02 /* ysocket.swift */; };
 		78F7DA9F27EB5BD000653F02 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9927EB5BD000653F02 /* ytcpsocket.swift */; };
 		78F7DAA027EB5BD000653F02 /* YYSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DA9A27EB5BD000653F02 /* YYSocket.swift */; };
+		893BE5BF27EC481000CCDAB1 /* WelfareLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 893BE5BE27EC481000CCDAB1 /* WelfareLibrary */; };
 		89B0D5C927EB29F400895822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5C827EB29F400895822 /* AppDelegate.swift */; };
 		89B0D5CB27EB29F400895822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5CA27EB29F400895822 /* SceneDelegate.swift */; };
 		89B0D5CD27EB29F400895822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5CC27EB29F400895822 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		89B0D5E027EB29F800895822 /* SocketClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5DF27EB29F800895822 /* SocketClientTests.swift */; };
 		89B0D5EA27EB29F900895822 /* SocketClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5E927EB29F900895822 /* SocketClientUITests.swift */; };
 		89B0D5EC27EB29F900895822 /* SocketClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5EB27EB29F900895822 /* SocketClientUITestsLaunchTests.swift */; };
+		89B0D5FF27EC39F900895822 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D5FE27EC39F900895822 /* MessageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,7 @@
 		89B0D5E527EB29F900895822 /* SocketClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocketClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B0D5E927EB29F900895822 /* SocketClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClientUITests.swift; sourceTree = "<group>"; };
 		89B0D5EB27EB29F900895822 /* SocketClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		89B0D5FE27EC39F900895822 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893BE5BF27EC481000CCDAB1 /* WelfareLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +97,7 @@
 			children = (
 				78F7DA9427EB5BD000653F02 /* ysocket */,
 				78F7DA9A27EB5BD000653F02 /* YYSocket.swift */,
+				89B0D5FE27EC39F900895822 /* MessageModel.swift */,
 			);
 			path = Socket;
 			sourceTree = "<group>";
@@ -112,10 +117,12 @@
 		89B0D5BC27EB29F400895822 = {
 			isa = PBXGroup;
 			children = (
+				89B0D60227EC3A8C00895822 /* Packages */,
 				89B0D5C727EB29F400895822 /* SocketClient */,
 				89B0D5DE27EB29F800895822 /* SocketClientTests */,
 				89B0D5E827EB29F900895822 /* SocketClientUITests */,
 				89B0D5C627EB29F400895822 /* Products */,
+				89B0D60E27EC3E9700895822 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +168,20 @@
 			path = SocketClientUITests;
 			sourceTree = "<group>";
 		};
+		89B0D60227EC3A8C00895822 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		89B0D60E27EC3E9700895822 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +198,9 @@
 			dependencies = (
 			);
 			name = SocketClient;
+			packageProductDependencies = (
+				893BE5BE27EC481000CCDAB1 /* WelfareLibrary */,
+			);
 			productName = SocketClient;
 			productReference = 89B0D5C527EB29F400895822 /* SocketClient.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +273,9 @@
 				Base,
 			);
 			mainGroup = 89B0D5BC27EB29F400895822;
+			packageReferences = (
+				893BE5BD27EC480F00CCDAB1 /* XCRemoteSwiftPackageReference "welfare-library" */,
+			);
 			productRefGroup = 89B0D5C627EB29F400895822 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,6 +324,7 @@
 				78F7DA9E27EB5BD000653F02 /* ysocket.swift in Sources */,
 				78F7DA9C27EB5BD000653F02 /* yudpsocket.swift in Sources */,
 				89B0D5CD27EB29F400895822 /* ViewController.swift in Sources */,
+				89B0D5FF27EC39F900895822 /* MessageModel.swift in Sources */,
 				78F7DA9F27EB5BD000653F02 /* ytcpsocket.swift in Sources */,
 				89B0D5C927EB29F400895822 /* AppDelegate.swift in Sources */,
 				78F7DA9D27EB5BD000653F02 /* ytcpsocket.c in Sources */,
@@ -644,6 +672,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		893BE5BD27EC480F00CCDAB1 /* XCRemoteSwiftPackageReference "welfare-library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@gitee.com:laoyouHome/welfare-library.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		893BE5BE27EC481000CCDAB1 /* WelfareLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 893BE5BD27EC480F00CCDAB1 /* XCRemoteSwiftPackageReference "welfare-library" */;
+			productName = WelfareLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89B0D5BD27EB29F400895822 /* Project object */;
 }

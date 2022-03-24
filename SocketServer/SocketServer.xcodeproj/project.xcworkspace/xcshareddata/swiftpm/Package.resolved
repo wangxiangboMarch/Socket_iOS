@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "welfare-library",
+      "kind" : "remoteSourceControl",
+      "location" : "git@gitee.com:laoyouHome/welfare-library.git",
+      "state" : {
+        "revision" : "58f36281a629b73ba4ad371384ebfa335fed41b3",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
