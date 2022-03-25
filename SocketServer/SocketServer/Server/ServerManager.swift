@@ -16,7 +16,7 @@ class ServerManager: NSObject {
     // 服务器是否运行
     fileprivate lazy var isServerRunning: Bool = false
     // 保存客户端
-    fileprivate lazy var clientManagers: [ClientManager] = []
+    fileprivate lazy var clientManagers: Set<ClientManager> = []
     weak var logDelegate: ServerManagerLogDelegate?
 }
 
@@ -57,18 +57,16 @@ extension ServerManager {
         let manager = ClientManager(client: client)
         manager.delegate = self
         // save client
-        clientManagers.append(manager)
+        clientManagers.insert(manager)
         // begin accpet
         manager.startReadMessage()
     }
 }
 
 extension ServerManager: ClientManagerDelegate {
-    func remove(client: TCPClient) {
+    func remove(client: ClientManager) {
         // 从存储中移除当前client
-        if let index = try? clientManagers.firstIndex(where: { client.address == $0.client.address }) {
-            clientManagers.remove(at: index)
-        }
+        clientManagers.remove(client)
     }
     
     func clientLog(_ msg: String) {
@@ -76,6 +74,8 @@ extension ServerManager: ClientManagerDelegate {
     }
     
     func sendMessageToClient(_ msg: Data) {
+        
+        // 如果这条消息是离开房间的消息则应该先把当前客户端从存档中移除再进行消息转发
         
         for clientM in clientManagers {
             clientM.client.send(data: msg)

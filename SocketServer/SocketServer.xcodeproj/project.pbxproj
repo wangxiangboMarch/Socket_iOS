@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78A1B54D27EC9F5B008CD5D4 /* WelfareLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 78A1B54C27EC9F5B008CD5D4 /* WelfareLibrary */; };
 		78F7DAB627EB738C00653F02 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DAAF27EB738C00653F02 /* yudpsocket.c */; };
 		78F7DAB727EB738C00653F02 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DAB027EB738C00653F02 /* ytcpsocket.c */; };
 		78F7DAB827EB738C00653F02 /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DAB127EB738C00653F02 /* TCPClient.swift */; };
 		78F7DAB927EB738C00653F02 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DAB227EB738C00653F02 /* Result.swift */; };
 		78F7DABA27EB738C00653F02 /* UDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DAB427EB738C00653F02 /* UDPClient.swift */; };
 		78F7DABB27EB738C00653F02 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F7DAB527EB738C00653F02 /* Socket.swift */; };
+		89262EBB27EDBA1E00C00473 /* WelfareLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 89262EBA27EDBA1E00C00473 /* WelfareLibrary */; };
 		89B0D53D27EB148A00895822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D53C27EB148A00895822 /* AppDelegate.swift */; };
 		89B0D53F27EB148A00895822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B0D53E27EB148A00895822 /* ViewController.swift */; };
 		89B0D54127EB148C00895822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B0D54027EB148C00895822 /* Assets.xcassets */; };
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78A1B54D27EC9F5B008CD5D4 /* WelfareLibrary in Frameworks */,
+				89262EBB27EDBA1E00C00473 /* WelfareLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +193,7 @@
 			);
 			name = SocketServer;
 			packageProductDependencies = (
-				78A1B54C27EC9F5B008CD5D4 /* WelfareLibrary */,
+				89262EBA27EDBA1E00C00473 /* WelfareLibrary */,
 			);
 			productName = SocketServer;
 			productReference = 89B0D53927EB148A00895822 /* SocketServer.app */;
@@ -268,7 +268,7 @@
 			);
 			mainGroup = 89B0D53027EB148A00895822;
 			packageReferences = (
-				78A1B54B27EC9F5B008CD5D4 /* XCRemoteSwiftPackageReference "welfare-library" */,
+				89262EB727EDB9F300C00473 /* XCRemoteSwiftPackageReference "welfare-library" */,
 			);
 			productRefGroup = 89B0D53A27EB148A00895822 /* Products */;
 			projectDirPath = "";
@@ -655,7 +655,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		78A1B54B27EC9F5B008CD5D4 /* XCRemoteSwiftPackageReference "welfare-library" */ = {
+		89262EB727EDB9F300C00473 /* XCRemoteSwiftPackageReference "welfare-library" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@gitee.com:laoyouHome/welfare-library.git";
 			requirement = {
@@ -666,9 +666,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		78A1B54C27EC9F5B008CD5D4 /* WelfareLibrary */ = {
+		89262EBA27EDBA1E00C00473 /* WelfareLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78A1B54B27EC9F5B008CD5D4 /* XCRemoteSwiftPackageReference "welfare-library" */;
+			package = 89262EB727EDB9F300C00473 /* XCRemoteSwiftPackageReference "welfare-library" */;
 			productName = WelfareLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -122,6 +122,12 @@ extension YYSocket {
         let data = pumpkinEncoder(model: message).data(using: .utf8)!
         sendMessage(data, type: .gifmessage)
     }
+    
+    func sendHeartBeat(text: String) {
+        let message = HeartBeat(text: text)
+        let data = pumpkinEncoder(model: message).data(using: .utf8)!
+        sendMessage(data, type: .heartbeat)
+    }
 
     /// 给服务器发送消息
     /// - Parameters:

@@ -11,6 +11,7 @@ enum MessageOption: NSInteger {
     case leaveRoom
     case textMessage
     case gifmessage
+    case heartbeat
     
 }
 
@@ -29,4 +30,8 @@ struct GifMessage: Codable {
     let count: NSInteger
     let name: String
     let url: String
+}
+
+struct HeartBeat: Codable {
+    let text: String
 }

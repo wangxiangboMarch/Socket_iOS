@@ -18,11 +18,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var logView: UITextView!
     
+    fileprivate var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         logView.layoutManager.allowsNonContiguousLayout = false
+        
         // 获取网络权限状态
         let cellularData = CTCellularData.init()
         switch cellularData.restrictedState {
@@ -31,9 +33,7 @@ class ViewController: UIViewController {
         default:
             testHttp()
         }
-        
         setServer()
-        
     }
     /// 设置socket 连接
     fileprivate func setServer() {
@@ -41,6 +41,9 @@ class ViewController: UIViewController {
             setLogMessage(msg: "服务器连接成功")
             socket.startReadMessage()
             socket.delegate = self
+            
+            timer = Timer(fireAt: Date(), interval: 8, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+            RunLoop.current.add(timer, forMode: .common)
         }
     }
     
@@ -60,6 +63,11 @@ class ViewController: UIViewController {
         socket.sendGif(name: "火箭", count: 1000, url: "http://www.baidu.com")
     }
  
+    
+    @objc func timerAction() {
+        socket.sendHeartBeat(text: "i an heart beat")
+    }
+    
     
     func testHttp() {
         let url = URL(string: "https://www.baidu.com")!
@@ -87,6 +95,13 @@ class ViewController: UIViewController {
     func setLogMessage(msg: String) {
         logView.text = logView.text + "\n" + msg
         logView.scrollRangeToVisible(NSRange(location: logView.text.count, length: 1))
+    }
+    
+    deinit {
+        if timer != nil {
+            timer.invalidate()
+            timer = nil
+        }
     }
 }
 
