@@ -39,7 +39,7 @@ extension ClientManager {
         let timer = Timer(fireAt: Date(timeIntervalSinceNow: 10), interval: 10, target: self, selector: #selector(heartBeatAction), userInfo: nil, repeats: true)
         // 添加到当前线程的 RunLoop
         RunLoop.current.add(timer, forMode: .default)
-        RunLoop.current.run()
+        timer.fire()
         
         while isClientConnect {
             // [UInt8] 相当于[char]
